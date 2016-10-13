@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_5c4fccfc0805712bf27aec8bc5bd114cd831a073/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="15037289cf25f973bb0aa7d57cb39a16c5c5fdc8">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_7d51ffb7566b7983e6926c9bcaf2c6e36e17800f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_ff892e25a7d4387b773d60a8c2f644492c351eac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_dd9dfb777cb6ad17c0a10405c2919aa981dcdb44/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_feb32a9296aef6c4a7aa4830c3be4a1213899099/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_81770d1316c65cbb102eecdbb5baad147df3823f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_e4ab966203ace4bd8f0fa43f9878ca79850e898e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_754414567938db1a06bf346c18850f916ec93f29/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_e6a683b1876fe4323d1aed45a19311158ffb18c7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_dd7a99f896f0d2d4a85889b29b797ffeb14f2331/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d93c87da32c495f49cdbb22e818a0e58991b43ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_1b4ca17af55ab01aa1fa0a03a34c0b740d0924a3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f592595a7a5713fc93f2fdb825d0a3e31858c0d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_5f421b3b94a2bfadb05a641b59cc7d07023245a4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8d577bbea56904712bae860552eddab36ef3f4e4">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_71be3116a0f6ce56c4c635caa4b604ae776cb897/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_12b95d16ecca9b88babd502a2264f3f23f000ff9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_f240e85d453fa19b9ade553e29c7a55d67aadc07/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_6a19747101e795da16bcbe80ebb8eba55dd51533/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9ebbb098a6b9f20b0187f290c7b27fa1b261f87d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_4c60ce3c1f60bc450ad75c7eb0b4735b7c2f1924/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_805e607f9e2cf0c916aa7666be1a72869d3aa70d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f8876d2b36c7d51c684d14578be58dcc1e2f7147">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_257cc2fdd2d6cb3b4bd207e2543318574d72058f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_c875f6c1cf0b54b5b3aa5e6674a33f55fa9d5bdc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_72e772062b07c4247f016e0b938d40fdc2bc221e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_403f4da6fb7c56a98b48d1c831bdee66f32946c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_82d07144f1a4cf5fb6cf5996cac4b950eb674a0f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_54d9e46ce6509ed1dcb79c24acd76fc07aaf96fa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_0c526bdadd77c32306e3caaf6a766c8d2cc7c7c8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="886c81b0a4b51145aa394f9d0088c3e46af1d4dc">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6f645b3c0fa2ff6df0dbd427c0b53a4f614cd24f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_1113e58d78c3dce12a77951f199a595ad660ae68/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_17e43b1c5870a5726b7b114b118c8ec494c090f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_33d67145da7a6efd2ca92c66aaaf92e047cf3940/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_c1b68fa793d1ae0e2cef08eedeec2be933c41dc1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_c83cdf6b6c042414858815e67853ddafb8581ff5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_da0ac3c9ec1e122fbb8e5f7bc88b040db0380785/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/bzgs0b/AndroidStudioProjects/CNNTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_919814d9fc69347658c705be3d7d125548bb9935/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_37085814c935cf949dd34e07ea0fc860ca6ce055/classes.dex" />
+    </item>
+
+</items>

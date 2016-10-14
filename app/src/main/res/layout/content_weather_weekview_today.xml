@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.bzgs0b.cnntest.WeatherData"
-    tools:showIn="@layout/activity_weather_data">
+
     <RelativeLayout
         android:id="@+id/todayRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        >
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TODAY, OCT 12"
-            android:layout_alignParentTop="false"
-            android:layout_marginTop="40dp"
+            android:text="Current Weather"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:gravity="center"
-            android:textSize="20dp"
+            android:textSize="30dp"
             />
 
 
@@ -53,27 +48,27 @@
 
 
         <ImageView
-            android:layout_width="fill_parent"
+            android:layout_width="160dp"
             android:layout_height="160dp"
             android:src="@drawable/ic_clear"
             android:id="@+id/imageView"
-            android:gravity="center"
-            android:layout_toRightOf="@id/date"
-            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
 
             />
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Clear"
             android:textSize="24dp"
             android:id="@+id/weatherStatus"
             android:layout_below="@+id/imageView"
-            android:layout_toRightOf="@id/date"
 
-            />
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignRight="@+id/imageView" />
+
     </RelativeLayout>
 
-</android.support.v4.widget.NestedScrollView>

@@ -2,18 +2,30 @@ package com.example.bzgs0b.cnntest;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.ScrollingView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
+import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ListView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.ImageView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -21,7 +33,7 @@ import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-
+import java.util.Date;
 
 
 public class WeatherData extends AppCompatActivity {
@@ -31,135 +43,51 @@ public class WeatherData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_data);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
-
-       //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-       //     public void onClick(View view) {
-       //         Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-       //                 .setAction("Action", null).show();
-       //     }
-       // });
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         WeatherDataSettings api = new WeatherDataSettings();
-        new DownloadWebpageTask().execute();
-         //   new Thread(new Runnable() {
-         //       public void run() {
-                //    URL url = new URL(api.getApiURL());
-                //    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                //    try {
-                //        InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                //        readStream(in);
-                //    } finally {
-                //    urlConnection.disconnect();
-                //  }
-                //    InputStream inputStream = null;
-                //    String result = null;
-                //    try {
-                //        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"), 8);
-                //        StringBuilder sb = new StringBuilder();
-                //        String line = null;
-                //        while ((line = reader.readLine()) != null)
-                //        {
-                //            sb.append(line + "\n");
-                //        }
-                //        result = sb.toString();
-                //            try {
-                //                updateWeather(new JSONObject(result));
-                //                Context context = getApplicationContext();
-                //                CharSequence text = "Weather Data Loaded";
-                //                int duration = Toast.LENGTH_SHORT;
-                //                Toast toast = Toast.makeText(context, text, duration);
-                //                toast.show();
-                //                }catch(Exception e){
-                //                //yeah no
-                 //            }
-                 //       } catch (Exception e) {
-                        // Oops
-                 //   }
-                 //   finally {
-                 //       try{if(inputStream != null)inputStream.close();}catch(Exception squish){}
-                 //   }
-                    //Bitmap b = loadImageFromNetwork("http://example.com/image.png");
-                    //mImageView.setImageBitmap(b);
-         //       }
-    //}).start();
-       // }
-
-
-        /*
-
-        JSONObject jObject = new JSONObject(result);
-To get a specific String
-
-String aJsonString = jObject.getString("StringNAME");
-To get a specific boolean
-
-boolean aJsonBoolean = jObject.getBoolean("BOOLEANNAME");
-To get a specific integer
-
-int aJsonInteger = jObject.getInt("INTEGERNAME");
-To get a specific long
-
-long aJsonLong = jObject.getBoolean("LONGNAME");
-To get a specific double
-
-double aJsonDouble = jObject.getDouble("DOUBLENAME");
-To get a specific JSONArray:
-
-JSONArray jArray = jObject.getJSONArray("ARRAYNAME");
-To get the items from the array
-
-for (int i=0; i < jArray.length(); i++)
-{
-    try {
-        JSONObject oneObject = jArray.getJSONObject(i);
-        // Pulling items from the array
-        String oneObjectsItem = oneObject.getString("StringNAMEinTHEarray");
-        String oneObjectsItem2 = oneObject.getString("anotherStringNAMEINtheARRAY");
-    } catch (JSONException e) {
-        // Oops
-    }
-}
-
-
-http://api.openweathermap.org/data/2.5/weather?
-q=Atlanta,ga&units=imperial
-
-http://api.openweathermap.org/data/2.5/weather?
-q=Atlanta,ga&units=imperial&
-
-http://api.openweathermap.org/data/2.5/weather?q=Atlanta,ga&units=imperial&apikey=212cc505fc02d9a4eeb5f9dd365db68c
-212cc505fc02d9a4eeb5f9dd365db68c
-
-
-         */
-
+        new GetWeatherData().execute();
 
     }
 
 
 
-    private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
+    private class GetWeatherData extends AsyncTask<String, Void, String[]> {
 
-        public String readIt(InputStream stream, int len) throws IOException {
-            Reader reader = null;
-            reader = new InputStreamReader(stream, "UTF-8");
-            char[] buffer = new char[len];
-            reader.read(buffer);
-            return new String(buffer);
+        public String[] weatherReturn = new String[2];
+
+        public String readIt(InputStream stream) throws IOException {
+            BufferedReader reader = null;
+            StringBuffer response = new StringBuffer();
+
+            try {
+                reader = new BufferedReader(new InputStreamReader(stream));
+                String line = "";
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (reader != null) {
+                    try {
+                        reader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            return response.toString();
         }
 
 
-
         @Override
-        protected String doInBackground(String... urls) {
+        protected String[] doInBackground(String... urls) {
 
 
             InputStream is = null;
-            // Only display the first 500 characters of the retrieved
-            // web page content.
+            InputStream is2 = null;
+
             int len = 500;
             WeatherDataSettings settings = new WeatherDataSettings();
 
@@ -175,10 +103,26 @@ http://api.openweathermap.org/data/2.5/weather?q=Atlanta,ga&units=imperial&apike
                 int response = conn.getResponseCode();
                 Log.d(TAG, "The response is: " + response);
                 is = conn.getInputStream();
+                // Convert the InputStream into a string
+                weatherReturn[0] = readIt(is);
+
+                URL url2 = new URL(settings.getForecastURL());
+                HttpURLConnection conn2 = (HttpURLConnection) url2.openConnection();
+                conn2.setReadTimeout(10000 /* milliseconds */);
+                conn2.setConnectTimeout(15000 /* milliseconds */);
+                conn2.setRequestMethod("GET");
+                conn2.setDoInput(true);
+                // Starts the query
+                conn2.connect();
+                int response2 = conn2.getResponseCode();
+                Log.d(TAG, "The response is: " + response2);
+                is2 = conn2.getInputStream();
+
+
 
                 // Convert the InputStream into a string
-                String contentAsString = readIt(is, len);
-                return contentAsString;
+                weatherReturn[1] = readIt(is2);
+                Log.d(TAG, "The response is: " + weatherReturn[1]);
 
                 // Makes sure that the InputStream is closed after the app is
                 // finished using it.
@@ -198,32 +142,124 @@ http://api.openweathermap.org/data/2.5/weather?q=Atlanta,ga&units=imperial&apike
 //            } catch (Exception e) {
 //                return "Unable to retrieve web page. URL may be invalid.";
 //            }
-            return "error";
+            return weatherReturn;
         }
         // onPostExecute displays the results of the AsyncTask.
         @Override
-        protected void onPostExecute(String result) {
-            JSONObject r = null;
+        protected void onPostExecute(String[] result) {
+            JSONObject currentWeather = null;
+            JSONObject forecastWeather = null;
             try {
-                r = new JSONObject(result);
+                currentWeather = new JSONObject(result[0]);
+                forecastWeather = new JSONObject(result[1]);
+
             } catch (Exception e) {
                 e.printStackTrace();
                 Log.v("CNNTEST", "error");
 
             }
-            updateWeather(r);
+            updateWeather(currentWeather,forecastWeather);
             //textView.setText(result);
         }
     }
 
 
-    private void updateWeather(JSONObject weatherTemp){
-        JSONObject weatherJSON = weatherTemp;
+    private void updateWeather(JSONObject currentWeather, JSONObject forecastWeather){
 
-        Log.v("CNNTEST", weatherJSON.toString());
+        ///this is only todays weather
+        Log.v(TAG, currentWeather.toString());
+        Log.v(TAG, forecastWeather.toString());
+
+        String highVal = null, lowVal = null;
+        String currentWeatherString = null;
+        String currentWeatherIcon = null;
+        //today's forcast
+                try {
+                    JSONObject mainWeather = currentWeather.getJSONObject("main");
+
+                    // tempVal = mainWeather.getString("temp");
+                    highVal = Math.round(mainWeather.getDouble("temp_max")  - 32.0 * (5.0/9.0)) + "°";
+                    lowVal = Math.round(mainWeather.getDouble("temp_min") - 32.0 * (5.0/9.0)) + "°";
+
+
+                    JSONObject weather = (currentWeather.getJSONArray("weather").getJSONObject(0));
+                    currentWeatherString = weather.getString("main");
+                    currentWeatherIcon = weather.getString("icon");
+                    //imageView
+                    //JSONArray weatherArray = currentWeather.getJSONArray("weather");
+                } catch (JSONException e) {
+                    // Oops
+            }
+        LayoutInflater inflater = LayoutInflater.from(this);
+        RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.content_weather_weekview_today, null, false);
+        TextView text = (TextView)layout.findViewById(R.id.tempHigh);
+        text.setText(highVal);
+        text = (TextView)layout.findViewById(R.id.tempLow);
+        text.setText(lowVal);
+        text = (TextView) layout.findViewById(R.id.weatherStatus);
+        text.setText(currentWeatherString);
+        ImageView imagePic = (ImageView)layout.findViewById(R.id.imageView);
+        getImageView(imagePic,currentWeatherIcon );
+        //imagePic.setImageResource(R.drawable.art_clear);
+
+
+       LinearLayout linear = (LinearLayout)findViewById(R.id.main_container);
+       linear.addView(layout);
+
+
+            try{
+                //weekly forecast
+                JSONArray listData =  forecastWeather.getJSONArray("list");
+                for (int i=1; i<listData.length(); i++){
+                    JSONObject tempList = listData.getJSONObject(i);
+                    String dateFormat = "MM/dd/yyyy";
+
+                    JSONObject temperatures = tempList.getJSONObject("temp");
+                    JSONObject weather = (tempList.getJSONArray("weather").getJSONObject(0));
+
+
+                    highVal = Math.round(temperatures.getDouble("max") - 32.0 * (5.0/9.0)) + "°";
+                    lowVal =  Math.round(temperatures.getDouble("min") - 32.0 * (5.0/9.0)) + "°";
+                    currentWeatherIcon = weather.getString("icon");
+
+                    String wData = weather.getString("main");
+
+                    layout = (RelativeLayout) inflater.inflate(R.layout.content_weather_weekview_day, null, false);
+
+
+
+                    text = (TextView) layout.findViewById(R.id.tempHigh);
+                    text.setText(highVal);
+
+                    text = (TextView) layout.findViewById(R.id.tempLow);
+                    text.setText(lowVal);
+
+                    text = (TextView) layout.findViewById(R.id.date);
+                    if (i == 1)
+                        text.setText("Tomorrow");
+                    else
+                        text.setText(DateFormat.format(dateFormat, Long.parseLong(tempList.getString("dt") + "000")).toString());
+
+                    text = (TextView) layout.findViewById(R.id.weatherStatus);
+                    text.setText(wData);
+                             imagePic = (ImageView)layout.findViewById(R.id.imageView);
+                     getImageView(imagePic,currentWeatherIcon );
+
+                    //linear = (LinearLayout) findViewById(R.id.main_container);
+                    linear.addView(layout);
+
+
+                }
+
+            }catch (Exception e){
+
+            }
+           // LayoutInflater rinflater = LayoutInflater.from(this);
+       }
+        //    <include layout="@layout/content_weather_weekview_today" />
         //weatherJSON = weatherTemp;
 
-    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -243,5 +279,61 @@ http://api.openweathermap.org/data/2.5/weather?q=Atlanta,ga&units=imperial&apike
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void getImageView(ImageView img, String state)                {
+
+
+        switch (state) {
+
+            case "01d":
+                img.setImageResource(R.drawable.art_clear);
+                break;
+            case "02d":
+                img.setImageResource(R.drawable.art_light_clouds);
+
+                break;
+            case "03d":
+                 img.setImageResource(R.drawable.art_clouds);
+
+                break;
+            case "04d":
+                img.setImageResource(R.drawable.art_clouds);
+
+                break;
+            case "09d":
+                img.setImageResource(R.drawable.art_light_rain);
+
+                break;
+            case "10d":
+                img.setImageResource(R.drawable.art_rain);
+
+                break;
+            case "11d":
+                img.setImageResource(R.drawable.art_storm);
+
+                break;
+            case "13d":
+                img.setImageResource(R.drawable.art_snow);
+
+                break;
+            case "50d":
+                img.setImageResource(R.drawable.art_fog);
+
+                break;
+            default:
+                img.setImageResource(R.drawable.art_clear);
+                break;
+
+
+
+
+
+
+
+        }
+
+
+
     }
 }

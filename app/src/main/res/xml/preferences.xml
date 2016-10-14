@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <CheckBoxPreference
+        android:key="pref_icon"
+        android:title="Icon Mode"
+        android:summary="Leave checked if you like beautiful icons."
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="pref_celc"
+        android:title="Celcius"
+        android:summary="Leave box checked if you want celcius, uncheck if you want F. (REQUIRES APP RESTART)"
+        android:defaultValue="true" />
+    <EditTextPreference android:title="API Server"
+        android:key="perf_apiserver"
+        android:summary="Change the default API server (wouldn't recommend)"
+        android:defaultValue="http://api.openweathermap.org/data/2.5/"></EditTextPreference>
+    <EditTextPreference android:title="API Key"
+        android:key="perf_apikey"
+        android:summary="Change the default API Key used to connect to the server"
+        android:defaultValue="http://api.openweathermap.org/data/2.5/"></EditTextPreference>
+    <EditTextPreference android:title="Location"
+        android:key="perf_location"
+        android:summary="Change the default location"
+        android:defaultValue="Atlanta,ga"></EditTextPreference>
+
+    <com.example.bzgs0b.cnntest.NumberPickerPreference
+        android:key="pref_days"
+        android:title="Number of days in the Forecast "
+        android:summary="Change this if you want to get more than the default 7 days."
+        android:defaultValue="7" />
+
+
+</PreferenceScreen>

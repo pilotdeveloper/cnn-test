@@ -51,7 +51,6 @@ public class WeatherData extends AppCompatActivity {
     }
 
 
-
     private class GetWeatherData extends AsyncTask<String, Void, String[]> {
 
         public String[] weatherReturn = new String[2];
@@ -119,18 +118,15 @@ public class WeatherData extends AppCompatActivity {
                 is2 = conn2.getInputStream();
 
 
-
                 // Convert the InputStream into a string
                 weatherReturn[1] = readIt(is2);
                 Log.d(TAG, "The response is: " + weatherReturn[1]);
 
                 // Makes sure that the InputStream is closed after the app is
                 // finished using it.
+            } catch (Exception e) {
+                Log.v("WTF", "WTF");
             }
-            catch (Exception e) {
-                Log.v("WTF","WTF");
-            }
-
 
 
             // params comes from the execute() call: params[0] is the url.
@@ -144,6 +140,7 @@ public class WeatherData extends AppCompatActivity {
 //            }
             return weatherReturn;
         }
+
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String[] result) {
@@ -158,13 +155,13 @@ public class WeatherData extends AppCompatActivity {
                 Log.v("CNNTEST", "error");
 
             }
-            updateWeather(currentWeather,forecastWeather);
+            updateWeather(currentWeather, forecastWeather);
             //textView.setText(result);
         }
     }
 
 
-    private void updateWeather(JSONObject currentWeather, JSONObject forecastWeather){
+    private void updateWeather(JSONObject currentWeather, JSONObject forecastWeather) {
 
         ///this is only todays weather
         Log.v(TAG, currentWeather.toString());
@@ -174,89 +171,89 @@ public class WeatherData extends AppCompatActivity {
         String currentWeatherString = null;
         String currentWeatherIcon = null;
         //today's forcast
-                try {
-                    JSONObject mainWeather = currentWeather.getJSONObject("main");
+        try {
+            JSONObject mainWeather = currentWeather.getJSONObject("main");
 
-                    // tempVal = mainWeather.getString("temp");
-                    highVal = String.format("%1f" + "°",(mainWeather.getDouble("temp_max")  - 32.0 )* (5.0/9.0)) ;
-                    lowVal = String.format("%1f" + "°",(mainWeather.getDouble("temp_min") - 32.0 )* (5.0/9.0)) ;
+            // tempVal = mainWeather.getString("temp");
+            highVal = Math.round((mainWeather.getDouble("temp_max") - 32.0) * (5.0 / 9.0)) + "°";
+            lowVal = Math.round((mainWeather.getDouble("temp_min") - 32.0) * (5.0 / 9.0)) + "°";
 
-                    JSONObject weather = (currentWeather.getJSONArray("weather").getJSONObject(0));
-                    currentWeatherString = weather.getString("main");
-                    currentWeatherIcon = weather.getString("icon");
-                    //imageView
-                    //JSONArray weatherArray = currentWeather.getJSONArray("weather");
-                } catch (JSONException e) {
-                    // Oops
-            }
+
+            JSONObject weather = (currentWeather.getJSONArray("weather").getJSONObject(0));
+            currentWeatherString = weather.getString("main");
+            currentWeatherIcon = weather.getString("icon");
+            //imageView
+            //JSONArray weatherArray = currentWeather.getJSONArray("weather");
+        } catch (JSONException e) {
+            // Oops
+        }
         LayoutInflater inflater = LayoutInflater.from(this);
         RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.content_weather_weekview_today, null, false);
-        TextView text = (TextView)layout.findViewById(R.id.tempHigh);
+        TextView text = (TextView) layout.findViewById(R.id.tempHigh);
         text.setText(highVal);
-        text = (TextView)layout.findViewById(R.id.tempLow);
+        text = (TextView) layout.findViewById(R.id.tempLow);
         text.setText(lowVal);
         text = (TextView) layout.findViewById(R.id.weatherStatus);
         text.setText(currentWeatherString);
-        ImageView imagePic = (ImageView)layout.findViewById(R.id.imageView);
-        getImageView(imagePic,currentWeatherIcon );
+        ImageView imagePic = (ImageView) layout.findViewById(R.id.imageView);
+        getImageView(imagePic, currentWeatherIcon);
         //imagePic.setImageResource(R.drawable.art_clear);
 
 
-       LinearLayout linear = (LinearLayout)findViewById(R.id.main_container);
-       linear.addView(layout);
+        LinearLayout linear = (LinearLayout) findViewById(R.id.main_container);
+        linear.addView(layout);
 
 
-            try{
-                //weekly forecast
-                JSONArray listData =  forecastWeather.getJSONArray("list");
-                for (int i=1; i<listData.length(); i++){
-                    JSONObject tempList = listData.getJSONObject(i);
-                    String dateFormat = "MM/dd/yyyy";
+        try {
+            //weekly forecast
+            JSONArray listData = forecastWeather.getJSONArray("list");
+            for (int i = 1; i < listData.length(); i++) {
+                JSONObject tempList = listData.getJSONObject(i);
+                String dateFormat = "MM/dd/yyyy";
 
-                    JSONObject temperatures = tempList.getJSONObject("temp");
-                    JSONObject weather = (tempList.getJSONArray("weather").getJSONObject(0));
-
-
-                    highVal = String.format("%1f" + "°", (temperatures.getDouble("max") - 32.0) * (5.0/9.0)) ;
-                    lowVal =  String.format("%1f" + "°", (temperatures.getDouble("min") - 32.0 )* (5.0/9.0)) ;
-                    currentWeatherIcon = weather.getString("icon");
-
-                    String wData = weather.getString("main");
-
-                    layout = (RelativeLayout) inflater.inflate(R.layout.content_weather_weekview_day, null, false);
+                JSONObject temperatures = tempList.getJSONObject("temp");
+                JSONObject weather = (tempList.getJSONArray("weather").getJSONObject(0));
 
 
+                highVal = Math.round((temperatures.getDouble("max") - 32.0) * (5.0 / 9.0)) + "°";
+                lowVal = Math.round((temperatures.getDouble("min") - 32.0) * (5.0 / 9.0)) + "°";
+                currentWeatherIcon = weather.getString("icon");
 
-                    text = (TextView) layout.findViewById(R.id.tempHigh);
-                    text.setText(highVal);
+                String wData = weather.getString("main");
 
-                    text = (TextView) layout.findViewById(R.id.tempLow);
-                    text.setText(lowVal);
-
-                    text = (TextView) layout.findViewById(R.id.date);
-                    if (i == 1)
-                        text.setText("Tomorrow");
-                    else
-                        text.setText(DateFormat.format(dateFormat, Long.parseLong(tempList.getString("dt") + "000")).toString());
-
-                    text = (TextView) layout.findViewById(R.id.weatherStatus);
-                    text.setText(wData);
-                             imagePic = (ImageView)layout.findViewById(R.id.imageView);
-                     getImageView(imagePic,currentWeatherIcon );
-
-                    //linear = (LinearLayout) findViewById(R.id.main_container);
-                    linear.addView(layout);
+                layout = (RelativeLayout) inflater.inflate(R.layout.content_weather_weekview_day, null, false);
 
 
-                }
+                text = (TextView) layout.findViewById(R.id.tempHigh);
+                text.setText(highVal);
 
-            }catch (Exception e){
+                text = (TextView) layout.findViewById(R.id.tempLow);
+                text.setText(lowVal);
+
+                text = (TextView) layout.findViewById(R.id.date);
+                if (i == 1)
+                    text.setText("Tomorrow");
+                else
+                    text.setText(DateFormat.format(dateFormat, Long.parseLong(tempList.getString("dt") + "000")).toString());
+
+                text = (TextView) layout.findViewById(R.id.weatherStatus);
+                text.setText(wData);
+                imagePic = (ImageView) layout.findViewById(R.id.imageView);
+                getImageView(imagePic, currentWeatherIcon);
+
+                //linear = (LinearLayout) findViewById(R.id.main_container);
+                linear.addView(layout);
+
 
             }
-           // LayoutInflater rinflater = LayoutInflater.from(this);
-       }
-        //    <include layout="@layout/content_weather_weekview_today" />
-        //weatherJSON = weatherTemp;
+
+        } catch (Exception e) {
+
+        }
+        // LayoutInflater rinflater = LayoutInflater.from(this);
+    }
+    //    <include layout="@layout/content_weather_weekview_today" />
+    //weatherJSON = weatherTemp;
 
 
     @Override
@@ -280,11 +277,8 @@ public class WeatherData extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void getImageView(ImageView img, String state)                {
-
-
+    public void getImageView(ImageView img, String state) {
         switch (state) {
-
             case "01d":
                 img.setImageResource(R.drawable.art_clear);
                 break;
@@ -293,7 +287,7 @@ public class WeatherData extends AppCompatActivity {
 
                 break;
             case "03d":
-                 img.setImageResource(R.drawable.art_clouds);
+                img.setImageResource(R.drawable.art_clouds);
 
                 break;
             case "04d":
@@ -323,16 +317,6 @@ public class WeatherData extends AppCompatActivity {
             default:
                 img.setImageResource(R.drawable.art_clear);
                 break;
-
-
-
-
-
-
-
         }
-
-
-
     }
 }

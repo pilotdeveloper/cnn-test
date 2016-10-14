@@ -214,7 +214,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="0936680fa80a18b3cd52c59bbcad7e109338a93c">
+        sha1="54ebeda7039e802542c4d8f2f82337804aa14ab8">
         <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_71be3116a0f6ce56c4c635caa4b604ae776cb897/classes.dex" />
     </item>
     <item
@@ -295,7 +295,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="c2ab130557643cacae9e8590217f79d11d6c6e80">
+        sha1="5db5431d0c493c06e7ad625846ffdca12bedaea3">
         <dex dex="/Users/bzgs0b/GitHub/cnn-test/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6f645b3c0fa2ff6df0dbd427c0b53a4f614cd24f/classes.dex" />
     </item>
     <item

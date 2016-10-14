@@ -178,9 +178,8 @@ public class WeatherData extends AppCompatActivity {
                     JSONObject mainWeather = currentWeather.getJSONObject("main");
 
                     // tempVal = mainWeather.getString("temp");
-                    highVal = Math.round(mainWeather.getDouble("temp_max")  - 32.0 * (5.0/9.0)) + "°";
-                    lowVal = Math.round(mainWeather.getDouble("temp_min") - 32.0 * (5.0/9.0)) + "°";
-
+                    highVal = String.format("%1f" + "°",(mainWeather.getDouble("temp_max")  - 32.0 )* (5.0/9.0)) ;
+                    lowVal = String.format("%1f" + "°",(mainWeather.getDouble("temp_min") - 32.0 )* (5.0/9.0)) ;
 
                     JSONObject weather = (currentWeather.getJSONArray("weather").getJSONObject(0));
                     currentWeatherString = weather.getString("main");
@@ -218,8 +217,8 @@ public class WeatherData extends AppCompatActivity {
                     JSONObject weather = (tempList.getJSONArray("weather").getJSONObject(0));
 
 
-                    highVal = Math.round(temperatures.getDouble("max") - 32.0 * (5.0/9.0)) + "°";
-                    lowVal =  Math.round(temperatures.getDouble("min") - 32.0 * (5.0/9.0)) + "°";
+                    highVal = String.format("%1f" + "°", (temperatures.getDouble("max") - 32.0) * (5.0/9.0)) ;
+                    lowVal =  String.format("%1f" + "°", (temperatures.getDouble("min") - 32.0 )* (5.0/9.0)) ;
                     currentWeatherIcon = weather.getString("icon");
 
                     String wData = weather.getString("main");
